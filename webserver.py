@@ -5,7 +5,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
         self.end_headers()
-        self.wfile.write(b'Hello World. Hostname: ' + socket.gethostname().encode())
+        self.wfile.write(b'Test server v.0.2. Hostname: ' + socket.gethostname().encode())
 
 SERVER_PORT = 8000
 httpd = HTTPServer(('0.0.0.0', SERVER_PORT), SimpleHTTPRequestHandler)
